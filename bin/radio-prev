@@ -1,0 +1,27 @@
+#!/bin/bash
+
+RADIO_DIR="$HOME/.config/radio"
+STATIONS="$RADIO_DIR/stations"
+
+current=$(cat "$RADIO_DIR/current" 2>/dev/null || echo 0)
+
+count=$(wc -l < "$STATIONS")
+
+prev=$((current - 1))
+
+if [ "$prev" -lt 0 ]; then
+    prev=$((count - 1))
+fi
+
+echo "$prev" > "$RADIO_DIR/current"
+
+station=$(sed -n "$((prev+1))p" "$STATIONS")
+
+name="${station%%|*}"
+url="${station#*|}"
+
+pkill -f "mpv --no-video --no-ytdl" 2>/dev/null
+
+mpv --no-video --no-ytdl "$url" >/dev/null 2>&1 &
+
+notify-send "📻 Radio" "$name"

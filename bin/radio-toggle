@@ -1,0 +1,28 @@
+#!/bin/bash
+
+STATIONS="$HOME/.config/radio/stations"
+STATE="$HOME/.cache/radio-station"
+
+mkdir -p "$HOME/.cache"
+
+if [ ! -f "$STATE" ]; then
+    echo 0 > "$STATE"
+fi
+
+if pgrep -x mpv >/dev/null; then
+    pkill mpv
+    exit 0
+fi
+
+index=$(cat "$STATE")
+
+station=$(sed -n "$((index + 1))p" "$STATIONS")
+
+if [ -z "$station" ]; then
+    echo 0 > "$STATE"
+    station=$(sed -n "1p" "$STATIONS")
+fi
+
+url="${station#*|}"
+
+mpv --no-video --no-ytdl "$url" >/dev/null 2>&1 &

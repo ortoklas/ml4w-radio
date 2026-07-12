@@ -1,0 +1,13 @@
+# Editor temporary files
+*~
+*.swp
+*.bak
+
+# Backup folder
+backup/
+
+# Quickshell temporary files
+*.qmlc
+
+# Personal configuration
+statusbar.json
