@@ -22,13 +22,19 @@ cp config/radio/stations ~/.config/radio/
 cp quickshell/shared/icons/radio.svg \
    ~/.config/quickshell/shared/icons/
 
-cp quickshell/StatusbarApp/RadioModule.qml \
-   ~/.config/quickshell/StatusbarApp/
+BACKUP_DIR="$HOME/.config/ml4w-radio-backup"
 
-cp quickshell/StatusbarApp/BarButton.qml \
-   ~/.config/quickshell/StatusbarApp/
+mkdir -p "$BACKUP_DIR"
 
-cp quickshell/StatusbarApp/StatusbarWindow.qml \
+for file in RadioModule.qml BarButton.qml StatusbarWindow.qml
+do
+    if [ -f "$HOME/.config/quickshell/StatusbarApp/$file" ]; then
+        cp "$HOME/.config/quickshell/StatusbarApp/$file" \
+           "$BACKUP_DIR/$file"
+    fi
+done
+
+cp quickshell/StatusbarApp/*.qml \
    ~/.config/quickshell/StatusbarApp/
 
 echo
