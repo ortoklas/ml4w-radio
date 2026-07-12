@@ -4,6 +4,12 @@ set -e
 
 echo "Installing ML4W Radio..."
 
+if ! command -v mpv >/dev/null 2>&1; then
+    echo "Error: mpv is not installed."
+    echo "Install mpv first, then run this installer again."
+    exit 1
+fi
+
 mkdir -p ~/.config/radio
 mkdir -p ~/.local/bin
 mkdir -p ~/.config/quickshell/shared/icons
