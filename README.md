@@ -61,12 +61,14 @@ BBC Radio 1|https://stream.live.vc.bbcmedia.co.uk/bbc_radio_one
 
 ## Uninstallation
 
-Run:
+If you still have the repository:
 
 ```bash
+cd ml4w-radio
 ./uninstall.sh
 ```
 
 ## License
 
 MIT License
+
