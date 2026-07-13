@@ -39,7 +39,10 @@ Restart Quickshell after the installation.
 
 > **Note**
 >
-> Recent versions of ML4W use the Status Bar application for module configuration. If the Radio button does not appear after installation, open the ML4W Status Bar configuration and enable the **radio** module.
+> Recent versions of ML4W use the Status Bar application for module configuration. If the Radio button does not appear after installation, make folder ml4w-statusbar folder in Home/config.
+> [ml4w-statusbar.zip](https://github.com/user-attachments/files/29965357/ml4w-statusbar.zip)
+
+
 
 ## Configuration
 
