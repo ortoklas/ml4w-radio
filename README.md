@@ -10,6 +10,9 @@ A lightweight Internet Radio module for the ML4W Quickshell status bar.
 * Configurable station list
 * Native ML4W Quickshell integration
 
+<img width="3009" height="1212" alt="screenshot_main" src="https://github.com/user-attachments/assets/ac56c8a4-b8e8-471a-9c51-e540f99450d4" />
+
+
 ## Requirements
 
 * ML4W
