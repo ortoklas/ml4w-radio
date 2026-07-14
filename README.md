@@ -26,8 +26,9 @@ A lightweight Internet Radio module for the ML4W Quickshell status bar.
 Clone the repository:
 
 ```bash
-git clone https://github.com/ortoklas/ml4w-radio.git
+ git clone https://github.com/ortoklas/ml4w-radio.git
 cd ml4w-radio
+./install.sh
 ```
 
 Run the installer:
