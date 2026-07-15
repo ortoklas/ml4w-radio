@@ -31,11 +31,6 @@ cd ml4w-radio
 ./install.sh
 ```
 
-Run the installer:
-
-```bash
-./install.sh
-```
 
 Restart Quickshell after the installation or Relog in.
 
