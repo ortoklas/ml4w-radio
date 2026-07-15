@@ -37,7 +37,7 @@ Run the installer:
 ./install.sh
 ```
 
-Restart Quickshell after the installation.
+Restart Quickshell after the installation or Relog in.
 
 > **Note**
 >
